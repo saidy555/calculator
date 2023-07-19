@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/src/styles/style.css" />
+  </head>
+
+  <body>
+    <div class="calc">
+      <div id="screen"></div>
+
+      <div id="sci1">
+        <button>
+          <span class="yellow">SHIFT</span>
+        </button>
+        <button>
+          <span class="red">ALPHA</span>
+        </button>
+
+        <button>MODE</button>
+        <button>
+          <span class="yellow">SETUP</span>
+        </button>
+
+        <button>
+          <span class="yellow">SOLVE</span>
+          <span class="red enlargeFont">=</span><br />CAlC
+        </button>
+        <button class="enlargeFont">
+          <span class="yellow">d/dx■</span>
+          <span class="red">:</span><br />
+          ∫
+        </button>
+
+        <button class="enlargeFont">
+          <span class="yellow">X!</span><br />X<sup>-1</sup>
+        </button>
+        <button>
+          <span class="yellow">&#8721;</span>
+          <span class="red">&#8719;</span><br />
+          log<sub>■</sub>□
+        </button>
+
+        <div id="dpad">
+          <button class="enlargeFont" id="up">&uarr;</button>
+          <button class="enlargeFont" id="right">&rarr;</button>
+          <button class="enlargeFont" id="left">&larr;</button>
+          <button class="enlargeFont" id="down">&darr;</button>
+        </div>
+      </div>
+
+      <div id="sci2">
+        <button class="enlargeFont">
+          <span class="yellow">■<sup>□</sup>/<sub>□</sub></span>
+          <span class="red">&divideR</span> <br />
+          <sup>■</sup>/<sub>□</sub>
+        </button>
+        <button class="enlargeFont">
+          <span class="yellow">∛</span>
+          <br />√■
+        </button>
+        <button class="enlargeFont">
+          <span class="yellow">X<sup>3</sup></span>
+          <span class="cyan">DEC</span>
+          <br />X<sup>2</sup>
+        </button>
+        <button class="enlargeFont">
+          <span class="yellow"><sup>■</sup>√□</span>
+          <span class="cyan">HEX</span>
+          <br />X<sup>■</sup>
+        </button>
+        <button>
+          <span class="yellow">10<sup>■</sup></span>
+          <span class="cyan">BIN</span>
+          <br />log
+        </button>
+        <button>
+          <span class="yellow">e<sup>■</sup></span>
+          <span class="cyan">OCT</span>
+          <br />ln
+        </button>
+        <button class="enlargeFont">
+          <span class="yellow">&ang;</span>
+          <span class="red">A</span>
+          <br />(-)
+        </button>
+        <button class="enlargeFont">
+          <span class="yellow">FACT</span>
+          <span class="red">B</span>
+          <br /><sup>○, ,,</sup>
+        </button>
+        <button>
+          <span class="yellow">Abs</span>
+          <span class="red">C</span>
+          <br />hyp
+        </button>
+        <button>
+          <span class="yellow">sin<sup>-1</sup></span>
+          <span class="red">D</span>
+          <br />sin
+        </button>
+        <button>
+          <span class="yellow">cos<sup>-1</sup></span>
+          <span class="red">E</span>
+          <br />cos
+        </button>
+        <button>
+          <span class="yellow">tan<sup>-1</sup></span>
+          <span class="red">F</span>
+          <br />tan
+        </button>
+        <button>
+          <span class="yellow">STO</span>
+          <br />RCL
+        </button>
+        <button>
+          <span class="yellow">&larr;</span>
+          <span class="blue">i</span>
+          <br />ENG
+        </button>
+        <button class="enlargeFont">
+          <span class="yellow">%</span>
+          <br />(
+        </button>
+        <button class="enlargeFont">
+          <span class="yellow">,</span>
+          <span class="red">X</span>
+          <br />)
+        </button>
+        <button>
+          <span class="yellow">
+            A<sup>b</sup>/<sub>d</sub><=><sup>b</sup>/<sub>d</sub>
+          </span>
+          <span class="red">Y</span>
+          <br />S<=>D
+        </button>
+        <button>
+          <span class="yellow">M-</span>
+          <span class="red">M</span>
+          <br />M+
+        </button>
+      </div>
+      <div id="basic">
+        <button>
+          <span class="yellow">CONST</span>
+          <br />7
+        </button>
+        <button>
+          <span class="yellow">CONV</span>
+          <br />8
+        </button>
+        <button>
+          <span class="yellow">CLR</span>
+          <br />9
+        </button>
+        <button class="clearButtons">
+          <span class="yellow">INS</span>
+          <br />DEL
+        </button>
+        <button class="clearButtons">AC</button>
+        <button><span class="yellow">MATRIX</span><br />4</button>
+        <button><span class="yellow">VECTOR</span><br />5</button>
+        <button><span class="yellow">VERIFY</span><br />6</button>
+        <button>
+          <span class="yellow">nPr</span> <span class="red">GCD</span><br />X
+        </button>
+        <button class="enlargeFont">
+          <span class="yellow">nCr</span> <span class="red">LCM</span
+          ><br />&divide
+        </button>
+        <button><span class="yellow">STAT/DIST</span><br />1</button>
+        <button><span class="yellow">CMPLX</span><br />2</button>
+        <button><span class="yellow">BASE</span><br />3</button>
+        <button class="enlargeFont">
+          <span class="yellow">POL</span>
+          <span class="red">Int</span><br />+
+        </button>
+        <button class="enlargeFont">
+          <span class="yellow">Rec</span>
+          <span class="red">Intg</span>
+          <br />−
+        </button>
+        <button>
+          <span class="yellow">Rnd</span>
+          <br />0
+        </button>
+        <button class="enlargeFont">
+          <span class="yellow">Ran#</span>
+          <span class="red">Ranlnt</span>
+          <br />·
+        </button>
+        <button>
+          <span class="yellow">π</span>
+          <span class="red">e</span>
+          <br />x10<sup>x</sup>
+        </button>
+        <button>
+          <span class="yellow">DRG></span>
+          <span class="red">PreAns</span>
+          <br />ANS
+        </button>
+        <button class="enlargeFont">
+          <span class="front">=</span>
+        </button>
+      </div>
+    </div>
+
+    <script src="/src/js/calculator.js"></script>
+  </body>
+</html>

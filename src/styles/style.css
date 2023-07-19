@@ -6,11 +6,26 @@ html {
 *::after {
   box-sizing: inherit;
 }
+body {
+  width: 98vw;
+  background-color: #363636;
+}
+.calc {
+  width: 100%;
+  border: 8px solid #1d1d1d;
+  background-color: #202020;
+}
 
 button {
-  font-size: 1em;
-  font-weight: 550;
-  border-radius: 5px;
+  text-align: center;
+  background-color: rgb(48, 48, 48);
+  color: white;
+  font-weight: 400;
+  border-radius: 10px;
+  margin: 0.1em;
+  padding: 0;
+  cursor: pointer;
+  font-size: clamp(11px, 2vw, 15px);
 }
 
 .red {
@@ -25,19 +40,21 @@ button {
 .blue {
   color: blue;
 }
+.clearButtons {
+  background-color: #381319;
+}
 
 #screen {
+  color: white;
+  background-color: #111111;
   margin: auto;
-  background-color: #d4e2e3;
   border: solid gray;
   height: 32vh;
-  width: 98vw;
 }
 
 #sci1 {
   margin: auto;
   height: 12.8vh;
-  width: 98vw;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -47,13 +64,11 @@ button {
 #dpad {
   grid-area: 1 / 3 / 3 / 5;
   display: grid;
-  border: 1px solid green;
   border-radius: 2.3em;
-  background-color: #c3e364;
 }
 #dpad button {
   border-radius: 10px;
-  background-color: #9b9b99;
+  background-color: #381319;
 }
 #left {
   grid-row-start: 2;
@@ -75,7 +90,6 @@ button {
 #sci2 {
   margin: auto;
   height: 19.2vh;
-  width: 98vw;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -86,7 +100,6 @@ button {
 #basic {
   margin: auto;
   height: 32vh;
-  width: 98vw;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 1fr);
@@ -94,26 +107,9 @@ button {
   grid-row-gap: 0px;
 }
 
-@media only screen and (max-width: 600px) {
-  button {
-    font-size: 1em;
-  }
-
-  #screen {
-    height: 15vh;
-  }
-  #sci1 {
-    height: 18.4vh;
-  }
-  #sci2 {
-    height: 24.8vh;
-  }
-  #basic {
-    height: 37.6vh;
-  }
-}
-@media only screen and (max-width: 400px) {
-  button {
-    font-size: 0.5em;
+@media only screen and (min-width: 800px) {
+  .calc {
+    width: 70%;
+    margin: auto;
   }
 }
