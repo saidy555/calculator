@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div class="calc">
+      <div id="screen">
+        <div id="options">
+          <span id="shiftAlpha"></span>
+          <span id="modeSetup"></span>
+        </div>
+        <div id="output">
+          <span id="sentence"></span>
+          <span class="input-cursor"></span>
+        </div>
+      </div>
+
+      <div class="calcButtons">
+        <div id="sci1">
+          <button name="shift">
+            <span class="yellow">SHIFT</span>
+          </button>
+          <button name="alpha">
+            <span class="red">ALPHA</span>
+          </button>
+
+          <button name="mode">MODE</button>
+          <button name="setup">SETUP</button>
+
+          <button name="calc">
+            <span class="yellow">SOLVE</span>
+            <span class="red enlargeFont">=</span><br />CAlC
+          </button>
+          <button name="integral">
+            <span class="yellow">d/dx■</span>
+            <span class="red">:</span><br />
+            ∫
+          </button>
+
+          <button name="power-1">
+            <span class="yellow">X!</span><br />X<sup>-1</sup>
+          </button>
+          <button name="log">
+            <span class="yellow">&#8721;</span>
+            <span class="red">&#8719;</span><br />
+            log<sub>■</sub>□
+          </button>
+
+          <div id="dpad">
+            <button name="up" id="up">&uarr;</button>
+            <button name="right" id="right">&rarr;</button>
+            <button name="left" id="left">&larr;</button>
+            <button name="down" id="down">&darr;</button>
+          </div>
+        </div>
+
+        <div id="sci2">
+          <button name="fraction">
+            <span class="yellow">■<sup>□</sup>/<sub>□</sub></span>
+            <span class="red">&divideR</span> <br />
+            <sup>■</sup>/<sub>□</sub>
+          </button>
+          <button name="squareRoot">
+            <span class="yellow">∛</span>
+            <br />√■
+          </button>
+          <button name="power2">
+            <span class="yellow">X<sup>3</sup></span>
+            <span class="cyan">DEC</span>
+            <br />X<sup>2</sup>
+          </button>
+          <button name="power">
+            <span class="yellow"><sup>■</sup>√□</span>
+            <span class="cyan">HEX</span>
+            <br />X<sup>■</sup>
+          </button>
+          <button name="logBase10">
+            <span class="yellow">10<sup>■</sup></span>
+            <span class="cyan">BIN</span>
+            <br />log
+          </button>
+          <button name="ln">
+            <span class="yellow">e<sup>■</sup></span>
+            <span class="cyan">OCT</span>
+            <br />ln
+          </button>
+          <button name="dash">
+            <span class="yellow">&ang;</span>
+            <span class="red">A</span>
+            <br />(-)
+          </button>
+          <button name="degree">
+            <span class="yellow">FACT</span>
+            <span class="red">B</span>
+            <br /><sup>○, ,,</sup>
+          </button>
+          <button name="hyp">
+            <span class="yellow">Abs</span>
+            <span class="red">C</span>
+            <br />hyp
+          </button>
+          <button name="sin">
+            <span class="yellow">sin<sup>-1</sup></span>
+            <span class="red">D</span>
+            <br />sin
+          </button>
+          <button name="cos">
+            <span class="yellow">cos<sup>-1</sup></span>
+            <span class="red">E</span>
+            <br />cos
+          </button>
+          <button name="tan">
+            <span class="yellow">tan<sup>-1</sup></span>
+            <span class="red">F</span>
+            <br />tan
+          </button>
+          <button name="rcl">
+            <span class="yellow">STO</span>
+            <br />RCL
+          </button>
+          <button name="eng">
+            <span class="yellow">&larr;</span>
+            <span class="blue">i</span>
+            <br />ENG
+          </button>
+          <button name="leftParenthesis">
+            <span class="yellow">%</span>
+            <br />(
+          </button>
+          <button name="rightParenthesis">
+            <span class="yellow">,</span>
+            <span class="red">X</span>
+            <br />)
+          </button>
+          <button name="switch">
+            <span class="yellow">
+              A<sup>b</sup>/<sub>d</sub><=><sup>b</sup>/<sub>d</sub>
+            </span>
+            <span class="red">Y</span>
+            <br />S<=>D
+          </button>
+          <button name="mPlus">
+            <span class="yellow">M-</span>
+            <span class="red">M</span>
+            <br />M+
+          </button>
+        </div>
+        <div id="basic">
+          <button name="7">
+            <span class="yellow">CONST</span>
+            <br />7
+          </button>
+          <button name="8">
+            <span class="yellow">CONV</span>
+            <br />8
+          </button>
+          <button name="9">
+            <span class="yellow">CLR</span>
+            <br />9
+          </button>
+          <button name="delete" class="clearButtons">
+            <span class="yellow">INS</span>
+            <br />DEL
+          </button>
+          <button name="clear" class="clearButtons">AC</button>
+          <button name="4"><span class="yellow">MATRIX</span><br />4</button>
+          <button name="5"><span class="yellow">VECTOR</span><br />5</button>
+          <button name="6"><span class="yellow">VERIFY</span><br />6</button>
+          <button name="*">
+            <span class="yellow">nPr</span> <span class="red">GCD</span><br />X
+          </button>
+          <button name="/">
+            <span class="yellow">nCr</span> <span class="red">LCM</span
+            ><br />&divide
+          </button>
+          <button name="1"><span class="yellow">STAT/DIST</span><br />1</button>
+          <button name="2"><span class="yellow">CMPLX</span><br />2</button>
+          <button name="3"><span class="yellow">BASE</span><br />3</button>
+          <button name="+">
+            <span class="yellow">POL</span>
+            <span class="red">Int</span><br />+
+          </button>
+          <button name="-">
+            <span class="yellow">Rec</span>
+            <span class="red">Intg</span>
+            <br />−
+          </button>
+          <button name="0">
+            <span class="yellow">Rnd</span>
+            <br />0
+          </button>
+          <button name=".">
+            <span class="yellow">Ran#</span>
+            <span class="red">Ranlnt</span>
+            <br />·
+          </button>
+          <button name="10powerX">
+            <span class="yellow">π</span>
+            <span class="red">e</span>
+            <br />x10<sup>x</sup>
+          </button>
+          <button name="answer">
+            <span class="yellow">DRG></span>
+            <span class="red">PreAns</span>
+            <br />ANS
+          </button>
+          <button name="equal">
+            <span class="front">=</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/sciCalc.js"></script>
+  </body>
+</html>
